@@ -267,11 +267,6 @@ document.onload = KMapp.init();
 document.querySelector('a.refresh').addEventListener('click', KMapp.init);
 
 document.getElementById('s').addEventListener('change', function () {
-    var checked = this.checked;
-
-    var url = "https://ask.libreoffice.org/es/api/v1/questions/";
-    if (!checked) {
-        url += "?scope=unanswered";
-    }
-    KMapp.getResults(url, true)
+    var url = "http://7.125.100.72:1234/api/v1/questions/";
+    KMapp.getResults(url, true);
 });
